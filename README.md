@@ -1,3 +1,7 @@
+> [!CAUTION]
+> The app targeted Android 15 and ran on Android 15 (Android Emulator).\
+> https://developer.android.com/about/versions/15/behavior-changes-15
+
 > [!NOTE]  
 > Highlights information that users should take into account, even when skimming.
 
