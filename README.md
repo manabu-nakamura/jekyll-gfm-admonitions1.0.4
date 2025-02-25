@@ -1,5 +1,9 @@
 `> [!NOTE]`
 
+```
+> [!NOTE]
+```
+
 > [!CAUTION]
 > The app targeted Android 15 and ran on Android 15 (Android Emulator).\
 > https://developer.android.com/about/versions/15/behavior-changes-15
