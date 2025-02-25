@@ -1,8 +1,8 @@
-`> [!NOTE]`
-
 ```
 > [!NOTE]
 ```
+
+`> [!NOTE]`
 
 > [!CAUTION]
 > The app targeted Android 15 and ran on Android 15 (Android Emulator).\
