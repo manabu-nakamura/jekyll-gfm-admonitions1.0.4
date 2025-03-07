@@ -32,7 +32,7 @@ quux
 > bar
   baz
 qux
-<img src="favicon.ico" alt="">
+<ins>underlined</ins>
 
 > [!NOTE]
 > foo
