@@ -1,17 +1,33 @@
 https://manabu-nakamura.github.io/jekyll-gfm-admonitions1.0.4/
+```markdown
+> [!NOTE]
+> foo
+> bar
+  baz
+qux
+
+quux
 ```
 > [!NOTE]
-> Highlights information that users should take into account,
-> even when skimming.
-  foo
-bar
+> foo
+> bar
+  baz
+qux
 
-baz
+quux
+```markdown
+> foo
+> bar
+  baz
+qux
+
+quux
 ```
-> [!NOTE]
-> Highlights information that users should take into account,
-> even when skimming.
-  foo
-bar
+> foo
+> bar
+  baz
+qux
 
-baz
+quux
+
+[Manabu Nakamura](https://github.com/manabu-nakamura)
