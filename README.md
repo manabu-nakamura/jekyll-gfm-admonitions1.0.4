@@ -27,5 +27,20 @@ quux
 qux
 
 quux
+> [!NOTE]
+> foo
+> bar
+  baz
+qux
+<img src="favicon.ico" alt="">
+
+> [!NOTE]
+> foo
+> bar
+  baz
+qux
+```markdown
+foo
+```
 
 [Manabu Nakamura](https://github.com/manabu-nakamura)
