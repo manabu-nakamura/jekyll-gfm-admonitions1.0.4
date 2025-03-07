@@ -7,6 +7,12 @@ https://manabu-nakamura.github.io/jekyll-gfm-admonitions1.0.4/
 qux
 
 quux
+> foo
+> bar
+  baz
+qux
+
+quux
 ```
 > [!NOTE]
 > foo
@@ -15,14 +21,6 @@ quux
 qux
 
 quux
-```markdown
-> foo
-> bar
-  baz
-qux
-
-quux
-```
 > foo
 > bar
   baz
