@@ -8,6 +8,7 @@ markdown: GFM
 plugins:
 - jekyll-gfm-admonitions
 - jekyll-optional-front-matter
+- test
 
 exclude: 
   - "**/*.ts" # Exclude source code files!
