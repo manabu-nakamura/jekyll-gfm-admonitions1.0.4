@@ -1,7 +1,4 @@
 https://manabu-nakamura.github.io/jekyll-gfm-admonitions1.0.4/
-
---test
-
 ```markdown
 > foo
 > bar
