@@ -5,6 +5,5 @@ group :jekyll_plugins do
   gem 'jekyll-gfm-admonitions', '1.0.4'
   gem 'jekyll-optional-front-matter'
   gem 'github-pages'
-  gem 'jekyll-t', git: 'https://github.com/manabu-nakamura/jekyll-gfm-admonitions', branch: 'a'
 end
 gem 'jekyll-remote-theme'
