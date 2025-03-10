@@ -3,7 +3,7 @@ source 'https://rubygems.org'
 gem 'jekyll'
 group :jekyll_plugins do
 #  gem 'jekyll-gfm-admonitions', '1.0.4'
-  gem 'jekyll-gfm-admonitions', path: '.'
+#  gem 'jekyll-gfm-admonitions', path: '.'
   gem 'jekyll-optional-front-matter'
   gem 'github-pages'
 #  gem 'aaa', path: '.'
