@@ -6,6 +6,5 @@ group :jekyll_plugins do
   gem 'jekyll-gfm-admonitions', path: '.'
   gem 'jekyll-optional-front-matter'
   gem 'github-pages'
-#  gem 'aaa', path: '.'
 end
 gem 'jekyll-remote-theme'
