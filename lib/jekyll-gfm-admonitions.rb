@@ -41,6 +41,7 @@ module Jekyll
     end
 
     def convert(content)
+      original_content = content.dup
 #      content.upcase
 #      content.gsub!(/<blockquote>(.*)<\/blockquote>/m, '<pre>\1</pre>')
 #      content.gsub!(/<blockquote>\s*<p>\[!NOTE\](.*?)<\/p>\s*<\/blockquote>/m, '<pre>\1</pre>')
@@ -54,6 +55,21 @@ module Jekyll
 
         icon = Octicons::Octicon.new(ADMONITION_ICONS[type]).to_svg
         admonition_html(type, title, text, icon)
+      end
+
+      if content != original_content
+        css = File.read(File.expand_path('../assets/admonitions.css', __dir__))
+
+        content.gsub!(%r{<head>(.*?)</head>}m) do |match|
+          head = Regexp.last_match(1)
+          "<head>#{head}<style>#{CSSminify.compress(css)}</style></head>"
+        end
+
+        # If no <head> tag is found, insert the CSS at the start of the output
+        if !content.match(%r{<head>(.*?)</head>}m)
+          Jekyll.logger.debug 'GFMA:', "No <head> tag found in '#{page.path}', inserting CSS at the beginning of the page."
+          content = "<head><style>#{CSSminify.compress(css)}</style></head>" + content
+        end
       end
 
       # 🛠 Ensure a blank line exists after each admonition block to prevent Markdown parsing issues.
