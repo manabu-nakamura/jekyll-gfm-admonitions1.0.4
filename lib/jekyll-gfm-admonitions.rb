@@ -60,7 +60,6 @@ module Jekyll
       content
     end
 
-=begin
     def admonition_html(type, title, text, icon)
       "<div class='markdown-alert markdown-alert-#{type}'>" \
         "<p class='markdown-alert-title'>#{icon} #{title}</p>" \
@@ -68,6 +67,7 @@ module Jekyll
       "</div>"
     end
 
+=begin
     def generate(site)
       init_converter(site)
       process_posts(site)
