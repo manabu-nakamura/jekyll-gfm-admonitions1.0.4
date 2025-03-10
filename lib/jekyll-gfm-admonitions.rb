@@ -14,7 +14,7 @@ ADMONITION_ICONS = {
 
 # JekyllGFMAdmonitions is a module that provides functionality to process and
 # convert GitHub-flavored markdown admonitions into HTML within Jekyll.
-module JekyllGFMAdmonitions
+module Jekyll
   # GFMAdmonitionConverter is a Jekyll generator that converts custom
   # admonition blocks in markdown (e.g., `> [!IMPORTANT]`) into styled HTML
   # alert boxes with icons.
