@@ -6,9 +6,9 @@ description: >-
 
 markdown: GFM 
 plugins:
-#- jekyll-gfm-admonitions
+- jekyll-gfm-admonitions
 - jekyll-optional-front-matter
-- aaa
+#- aaa
 
 exclude: 
   - "**/*.ts" # Exclude source code files!
