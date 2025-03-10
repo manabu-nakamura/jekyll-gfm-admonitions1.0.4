@@ -44,7 +44,8 @@ module Jekyll
 #      content.upcase
 #      content.gsub!(/<blockquote>(.*)<\/blockquote>/m, '<pre>\1</pre>')
 #      content.gsub!(/<blockquote>\s*<p>\[!NOTE\](.*?)<\/p>\s*<\/blockquote>/m, '<pre>\1</pre>')
-      content.gsub!(/<blockquote>\s*<p>\s*\[!(IMPORTANT|NOTE|WARNING|TIP|CAUTION)\](.*)$\n(.*?)\s*<\/p>\s*<\/blockquote>/m) do
+#      content.gsub!(/<blockquote>\s*<p>\s*\[!(IMPORTANT|NOTE|WARNING|TIP|CAUTION)\](.*)$\n(.*?)\s*<\/p>\s*<\/blockquote>/m) do
+      content.gsub!(/<blockquote>\s*<p>\s*\[!(IMPORTANT|NOTE|WARNING|TIP|CAUTION)\](.*?)$\n(.*?)\s*<\/p>\s*<\/blockquote>/m) do
 #        initial_indent = ::Regexp.last_match(1)
         type = ::Regexp.last_match(1).downcase
         title = ::Regexp.last_match(2).strip.empty? ? type.capitalize : ::Regexp.last_match(2).strip
