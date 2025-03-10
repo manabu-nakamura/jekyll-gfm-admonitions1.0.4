@@ -17,6 +17,14 @@ quux
 > foo
 > bar
 # H1
+> foo
+> bar
+# H1
+> [!NOTE] My own title
+> Fancy!
+
+    [!NOTE] My own title
+    Fancy!
 ```
 > foo
 > bar
@@ -41,7 +49,7 @@ quux
 > [!NOTE] My own title
 > Fancy!
 
-    > [!NOTE] My own title
-    > Fancy!
+    [!NOTE] My own title
+    Fancy!
 
 [Manabu Nakamura](https://github.com/manabu-nakamura)
