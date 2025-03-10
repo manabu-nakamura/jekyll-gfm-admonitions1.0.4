@@ -2,7 +2,7 @@
 
 require 'octicons'
 require 'cssminify'
-require 'liquid/template'
+#require 'liquid/template'
 
 ADMONITION_ICONS = {
   'important' => 'report',
@@ -16,11 +16,13 @@ module Jekyll
   class GFMAdmonitionConverter < Converter
     safe true
     priority :lowest
-    @admonition_pages = []
+#    @admonition_pages = []
 
+=begin
     class << self
       attr_reader :admonition_pages
     end
+=end
 
     def matches(ext)
       ext =~ /^\.(md|markdown)$/i
@@ -40,9 +42,9 @@ module Jekyll
         admonition_html(type, title, text, icon)
       end
       if content != original_content
-#        css = File.read(File.expand_path('../assets/admonitions.css', __dir__))
-#        content = "<head><style>#{CSSminify.compress(css)}</style></head>" + content
-        self.class.admonition_pages << content.page
+        css = File.read(File.expand_path('../assets/admonitions.css', __dir__))
+        content = "<head><style>#{CSSminify.compress(css)}</style></head>" + content
+#        self.class.admonition_pages << content.page
       end
       content
     end
@@ -55,6 +57,7 @@ module Jekyll
     end
   end
 
+=begin
   # Insert the minified CSS before the closing head tag of all pages we put admonitions on
   Jekyll::Hooks.register :site, :post_render do
     Jekyll.logger.info 'GFMA:', "Inserting admonition CSS in #{GFMAdmonitionConverter.admonition_pages.length} page(s)."
@@ -75,4 +78,5 @@ module Jekyll
       end
     end
   end
+=end
 end
