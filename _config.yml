@@ -4,7 +4,7 @@ repository: manabu-nakamura/jekyll-gfm-admonitions1.0.4
 description: >-
   A description of your project
 
-markdown: GFM 
+#markdown: GFM
 plugins:
 - jekyll-gfm-admonitions
 - jekyll-optional-front-matter
