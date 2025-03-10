@@ -6,7 +6,8 @@ module Jekyll
     priority :low
 
     def matches(ext)
-      ext =~ /^\.(md|markdown)$/i
+#      ext =~ /^\.(md|markdown)$/i
+      ext =~ /^\.md$/i
     end
 
     def output_ext(ext)
