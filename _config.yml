@@ -5,6 +5,12 @@ description: >-
   A description of your project
 
 #markdown: GFM
+markdown: kramdown
+
+kramdown:
+  input: GFM
+#  hard_wrap: false
+
 plugins:
 - jekyll-gfm-admonitions
 - jekyll-optional-front-matter
