@@ -12,7 +12,7 @@ markdown: GFM
 #  hard_wrap: false
 
 plugins:
-- jekyll-gfm-admonitions
+#- jekyll-gfm-admonitions
 - jekyll-optional-front-matter
 
 exclude: 
