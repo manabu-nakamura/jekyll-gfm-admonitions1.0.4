@@ -11,8 +11,8 @@ ADMONITION_ICONS = {
   'caution' => 'stop'
 }.freeze
 
-module Jekyll
-  class GFMAdmonitionConverter < Converter
+module JekyllGFMAdmonitions
+  class GFMAdmonitionConverter < Jekyll::Converter
     safe true
     priority :low
 
