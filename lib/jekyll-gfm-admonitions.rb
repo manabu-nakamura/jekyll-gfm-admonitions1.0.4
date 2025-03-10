@@ -15,7 +15,7 @@ ADMONITION_ICONS = {
 module Jekyll
   class GFMAdmonitionConverter < Converter
     safe true
-    priority :lowest
+    priority :low
 #    @admonition_pages = []
 
 =begin
