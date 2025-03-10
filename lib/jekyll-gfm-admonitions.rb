@@ -42,7 +42,7 @@ module Jekyll
       if content != original_content
 #        css = File.read(File.expand_path('../assets/admonitions.css', __dir__))
 #        content = "<head><style>#{CSSminify.compress(css)}</style></head>" + content
-        self.class.admonition_pages << doc
+        self.class.admonition_pages << content.page
       end
       content
     end
