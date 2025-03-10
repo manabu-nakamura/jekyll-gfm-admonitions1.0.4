@@ -35,5 +35,8 @@ quux
 > foo
 > bar
 # H1
+> foo
+> bar
+# H1
 
 [Manabu Nakamura](https://github.com/manabu-nakamura)
