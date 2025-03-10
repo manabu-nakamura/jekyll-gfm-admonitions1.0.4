@@ -4,11 +4,11 @@ repository: manabu-nakamura/jekyll-gfm-admonitions1.0.4
 description: >-
   A description of your project
 
-#markdown: GFM
-markdown: kramdown
+markdown: GFM
+#markdown: kramdown
 
-kramdown:
-  input: GFM
+#kramdown:
+#  input: GFM
 #  hard_wrap: false
 
 plugins:
