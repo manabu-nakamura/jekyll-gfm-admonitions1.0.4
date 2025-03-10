@@ -27,7 +27,7 @@ module Jekyll
 
     def convert(content)
       original_content = content.dup
-      content.gsub!(/<blockquote>\s*<p>\s*\[!(IMPORTANT|NOTE|WARNING|TIP|CAUTION)\](.*?)$\n(.*?)\s*<\/p>\s*<\/blockquote>/m) do
+      content.gsub!(/<blockquote>\s*<p>\s*\[!(IMPORTANT|NOTE|WARNING|TIP|CAUTION)\](.*?)\n(.*?)\s*<\/p>\s*<\/blockquote>/m) do
         type = ::Regexp.last_match(1).downcase
         title = ::Regexp.last_match(2).strip.empty? ? type.capitalize : ::Regexp.last_match(2).strip
         text = ::Regexp.last_match(3)
