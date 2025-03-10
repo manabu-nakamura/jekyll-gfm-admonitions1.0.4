@@ -41,7 +41,7 @@ module Jekyll
     end
 
     def convert(content)
-      original_content = content.dup
+#      original_content = content.dup
 #      content.upcase
 #      content.gsub!(/<blockquote>(.*)<\/blockquote>/m, '<pre>\1</pre>')
 #      content.gsub!(/<blockquote>\s*<p>\[!NOTE\](.*?)<\/p>\s*<\/blockquote>/m, '<pre>\1</pre>')
@@ -57,6 +57,7 @@ module Jekyll
         admonition_html(type, title, text, icon)
       end
 
+=begin
       if content != original_content
         css = File.read(File.expand_path('../assets/admonitions.css', __dir__))
 
@@ -71,6 +72,7 @@ module Jekyll
           content = "<head><style>#{CSSminify.compress(css)}</style></head>" + content
         end
       end
+  =end
 
       # 🛠 Ensure a blank line exists after each admonition block to prevent Markdown parsing issues.
 #      content.gsub!(/(<\/div>)(?!\n\n)/, "\\1\n\n")
@@ -171,6 +173,7 @@ module Jekyll
       "</div>"
     end
   end
+=end
 
   # Insert the minified CSS before the closing head tag of all pages we put admonitions on
   Jekyll::Hooks.register :site, :post_render do
@@ -191,6 +194,5 @@ module Jekyll
         page.output = "<head><style>#{CSSminify.compress(css)}</style></head>" + page.output
       end
     end
-=end
   end
 end
