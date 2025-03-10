@@ -2,7 +2,6 @@
 
 require 'octicons'
 require 'cssminify'
-#require 'liquid/template'
 
 ADMONITION_ICONS = {
   'important' => 'report',
@@ -16,13 +15,6 @@ module Jekyll
   class GFMAdmonitionConverter < Converter
     safe true
     priority :low
-#    @admonition_pages = []
-
-=begin
-    class << self
-      attr_reader :admonition_pages
-    end
-=end
 
     def matches(ext)
       ext =~ /^\.(md|markdown)$/i
@@ -44,7 +36,6 @@ module Jekyll
       if content != original_content
         css = File.read(File.expand_path('../assets/admonitions.css', __dir__))
         content = "<head><style>#{CSSminify.compress(css)}</style></head>" + content
-#        self.class.admonition_pages << content.page
       end
       content
     end
@@ -56,27 +47,4 @@ module Jekyll
       "</div>"
     end
   end
-
-=begin
-  # Insert the minified CSS before the closing head tag of all pages we put admonitions on
-  Jekyll::Hooks.register :site, :post_render do
-    Jekyll.logger.info 'GFMA:', "Inserting admonition CSS in #{GFMAdmonitionConverter.admonition_pages.length} page(s)."
-
-    GFMAdmonitionConverter.admonition_pages.each do |page|
-      Jekyll.logger.debug 'GFMA:', "Appending admonition style to '#{page.path}'."
-      css = File.read(File.expand_path('../assets/admonitions.css', __dir__))
-
-      page.output.gsub!(%r{<head>(.*?)</head>}m) do |match|
-        head = Regexp.last_match(1)
-        "<head>#{head}<style>#{CSSminify.compress(css)}</style></head>"
-      end
-
-      # If no <head> tag is found, insert the CSS at the start of the output
-      if !page.output.match(%r{<head>(.*?)</head>}m)
-        Jekyll.logger.debug 'GFMA:', "No <head> tag found in '#{page.path}', inserting CSS at the beginning of the page."
-        page.output = "<head><style>#{CSSminify.compress(css)}</style></head>" + page.output
-      end
-    end
-  end
-=end
 end
