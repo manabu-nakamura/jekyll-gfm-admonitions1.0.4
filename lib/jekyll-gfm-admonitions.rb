@@ -67,7 +67,7 @@ module Jekyll
 
         # If no <head> tag is found, insert the CSS at the start of the output
         if !content.match(%r{<head>(.*?)</head>}m)
-          Jekyll.logger.debug 'GFMA:', "No <head> tag found in '#{page.path}', inserting CSS at the beginning of the page."
+#          Jekyll.logger.debug 'GFMA:', "No <head> tag found in '#{page.path}', inserting CSS at the beginning of the page."
           content = "<head><style>#{CSSminify.compress(css)}</style></head>" + content
         end
       end
