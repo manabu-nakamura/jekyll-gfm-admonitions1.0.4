@@ -85,6 +85,7 @@ module Jekyll
         "#{text}" \
       "</div>"
     end
+  end
 
 =begin
     def generate(site)
