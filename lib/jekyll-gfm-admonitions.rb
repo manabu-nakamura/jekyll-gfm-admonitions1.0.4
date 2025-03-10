@@ -72,7 +72,7 @@ module Jekyll
           content = "<head><style>#{CSSminify.compress(css)}</style></head>" + content
         end
       end
-  =end
+=end
 
       # 🛠 Ensure a blank line exists after each admonition block to prevent Markdown parsing issues.
 #      content.gsub!(/(<\/div>)(?!\n\n)/, "\\1\n\n")
