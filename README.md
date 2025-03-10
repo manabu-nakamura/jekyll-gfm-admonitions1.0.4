@@ -25,6 +25,13 @@ quux
 
     [!NOTE] My own title
     Fancy!
+<blockquote>
+<p>
+[!NOTE]
+foo
+bar
+</p>
+</blockquote>
 ```
 > foo
 > bar
@@ -51,5 +58,12 @@ quux
 
     [!NOTE] My own title
     Fancy!
+<blockquote>
+<p>
+[!NOTE]
+foo
+bar
+</p>
+</blockquote>
 
 [Manabu Nakamura](https://github.com/manabu-nakamura)
